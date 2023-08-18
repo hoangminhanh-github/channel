@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Company;
+use App\Models\Channel;
 use Faker\Factory as Faker;
-class CompanySeeder extends Seeder
+class ChannelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +16,10 @@ class CompanySeeder extends Seeder
         $faker = Faker::create();
 
         for ($i = 0; $i < 50; $i++) {
-            Company::create([
-                'name' => $faker->company,
-                'email' => $faker->email,
-                'address' => $faker->address,
+            Channel::create([
+                'ChannelName' => $faker->ChannelName,
+                'Description' => $faker->Description,
+                'SubscriberCount' => $faker->SubscriberCount,
             ]);
         }
     }
