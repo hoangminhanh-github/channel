@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Edit Company Form - Laravel 9 CRUD Tutorial</title>
+    <title>Edit channel Form - Laravel 9 CRUD Tutorial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Company</h2>
+                <h2>Edit channel</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('channels.index') }}" enctype="multipart/form-data">
@@ -25,15 +25,15 @@
             {{ session('status') }}
         </div>
     @endif
-    <form action="{{ route('channels.update',$company->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('channels.update',$channel->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company Name:</strong>
-                    <input type="text" name="name" value="{{ $company->name }}" class="form-control"
-                           placeholder="Company name">
+                    <strong>channel Name:</strong>
+                    <input type="text" name="ChannelName" value="{{ $channel->ChannelName }}" class="form-control"
+                           placeholder="channel name">
                     @error('name')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
@@ -41,9 +41,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company Email:</strong>
-                    <input type="email" name="email" class="form-control" placeholder="Company Email"
-                           value="{{ $company->email }}">
+                    <strong>channel :</strong>
+                    <input type="text" name="Description" class="form-control" placeholder="channel desc"
+                           value="{{ $channel->Description }}">
                     @error('email')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
@@ -51,9 +51,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company Address:</strong>
-                    <input type="text" name="address" value="{{ $company->address }}" class="form-control"
-                           placeholder="Company Address">
+                    <strong>channel count:</strong>
+                    <input type="text" name="SubscriberCount" value="{{ $channel->SubscriberCount }}" class="form-control"
+                           placeholder="channel count">
                     @error('address')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror

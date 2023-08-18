@@ -45,9 +45,9 @@ class ChannelController extends Controller
   public function update(Request $request, string $id){
       $channel = Channel::find($id); //Tìm ra xem thằng nào trong CSDL cần sửa
 
-      $channel->name = $request->name;
-      $channel->email = $request->email;
-      $channel->address = $request->address;
+      $channel->ChannelName = $request->ChannelName;
+      $channel->Description = $request->Description;
+      $channel->SubscriberCount = $request->SubscriberCount;
 
       $channel->save(); //Tự so sánh với ví dụ ở Tutorial để hiểu thêm các cách làm khác nhau
 //        $company->fill($request->post())->save();
