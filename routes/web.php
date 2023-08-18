@@ -22,14 +22,14 @@ Route::get('/', function () {
 //Route::get("companies/{id}/delete", [CompanyController::class,"destroy"])->name("companies.destroy"); //Tôi cần FORM
 // 
 Route::get("channels",[ChannelController::class,"index"])->name("channels.index");
-Route::get("channels/create", [CompanyController::class,"create"])->name("channels.create");
-Route::get("channels/{id}", [CompanyController::class,"show"])->name("channels.show");
+Route::get("channels/create", [ChannelController::class,"create"])->name("channels.create");
+Route::get("channels/{id}", [ChannelController::class,"show"])->name("channels.show");
 
-Route::get("channels/{id}/edit", [CompanyController::class,"edit"])->name("channels.edit");
+Route::get("channels/{id}/edit", [ChannelController::class,"edit"])->name("channels.edit");
 
-Route::post("channels", [CompanyController::class,"store"])->name("channels.store");
-Route::put("channels/{id}", [CompanyController::class,"update"])->name("channels.update");
-Route::delete("channels/{id}", [CompanyController::class,"destroy"])->name("channels.destroy"); //Tôi cần FORM
+Route::post("channels", [ChannelController::class,"store"])->name("channels.store");
+Route::put("channels/{id}", [ChannelController::class,"update"])->name("channels.update");
+Route::delete("channels/{id}", [ChannelController::class,"destroy"])->name("channels.destroy"); //Tôi cần FORM
 
 
 
