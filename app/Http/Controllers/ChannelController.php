@@ -9,7 +9,7 @@ class ChannelController extends Controller
     //GET: companies (SELECT)
     public function index(){
 //        $companies = Company::all();
-        $channels = Channel::orderBy('ChannelId','desc')->paginate(5);
+        $channels = Channel::orderBy('id','desc')->paginate(5);
         return view("channel", compact("channels"));
     }
 
